@@ -5,6 +5,6 @@ CREATE TABLE Course (
     cDate DATETIME NOT NULL,
     cDescription VARCHAR(510),
     tid int NOT NULL,
-    MaxAttend int,
+    maxAttend int,
     FOREIGN KEY (tid) REFERENCES Trainer(tid)
 );
