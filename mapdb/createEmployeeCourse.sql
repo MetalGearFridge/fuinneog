@@ -1,4 +1,4 @@
-CREATE EmployeeCourse(
+CREATE TABLE EmployeeCourse(
     eid INT NOT NULL,
     cid INT NOT NULL,
     PRIMARY KEY(cid, eid),
