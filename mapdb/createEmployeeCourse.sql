@@ -4,5 +4,5 @@ CREATE EmployeeCourse(
     PRIMARY KEY(cid, eid),
 
     FOREIGN KEY (eid) REFERENCES Employee(eid),
-    FOREIGN KEY (tid) REFERENCES Trainer(tid)
-)
+    FOREIGN KEY (cid) REFERENCES Course(cid)
+);
