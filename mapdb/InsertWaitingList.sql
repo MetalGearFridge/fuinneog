@@ -1,0 +1,12 @@
+INSERT INTO Waiting-List (eid, cid) VALUES (1, 1);
+INSERT INTO Waiting-List (eid, cid) VALUES (1, 2);
+INSERT INTO Waiting-List (eid, cid) VALUES (2, 1);
+INSERT INTO Waiting-List (eid, cid) VALUES (2, 2);
+INSERT INTO Waiting-List (eid, cid) VALUES (3, 1);
+INSERT INTO Waiting-List (eid, cid) VALUES (3, 2);
+INSERT INTO Waiting-List (eid, cid) VALUES (4, 1);
+INSERT INTO Waiting-List (eid, cid) VALUES (4, 2);
+INSERT INTO Waiting-List (eid, cid) VALUES (5, 1);
+INSERT INTO Waiting-List (eid, cid) VALUES (5, 2);
+INSERT INTO Waiting-List (eid, cid) VALUES (6, 3);
+INSERT INTO Waiting-List (eid, cid) VALUES (6, 4);
