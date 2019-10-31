@@ -1,3 +1,4 @@
+DROP DATABASE mapdb;
 CREATE DATABASE mapdb;
 USE mapdb;
 
@@ -9,4 +10,6 @@ source createWaitingList.sql
 
 source insertEmployee.sql
 source insertTrainer.sql
-source insertWaitingList&EmployeeCourse.sql
+source insertCourse.sql
+source insertWaitingList.sql
+source insertEmployeeCourse.sql
