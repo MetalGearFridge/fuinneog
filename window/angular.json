@@ -64,7 +64,7 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "port": 8001,
-            "host": "192.168.62.206",
+            "host": "192.168.62.208",
             "browserTarget": "window:build"
           },
           "configurations": {
