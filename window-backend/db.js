@@ -23,7 +23,7 @@ exports.getEmployees = function(callback) {
     }
   )
 }
- 
+
 exports.getCourses = function (callback) {
   db.query(
     "select cName, cLocation, cDescription, cDate from Course",
@@ -32,4 +32,14 @@ exports.getCourses = function (callback) {
       callback(rows)
     }
   )
+}
+
+exports.addCourse = function(course, readyFn) {
+  db.query(
+    "insert into Course SET ?", course,
+    function(err, results, fields) {
+      if (err) throw err;
+      readyFn(results.insertId);
+    }
+  );
 }
