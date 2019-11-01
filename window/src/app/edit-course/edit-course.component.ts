@@ -7,13 +7,9 @@ import {NgForm} from '@angular/forms';
   styleUrls: ['./edit-course.component.css']
 })
 export class EditCourseComponent implements OnInit {
-
   formDisabled = true;
 
-  constructor() 
-  {
-    
-  }
+  constructor() { }
 
   ngOnInit() {
   }
