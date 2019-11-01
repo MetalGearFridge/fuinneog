@@ -9,6 +9,6 @@ VALUES ('Alice','A.Alice@kainos.com','Gdansk','P.Gzwarkszkf@kainos.com');
 INSERT INTO Employee (eName,eEMail,officeLocation,managerEmail)
 VALUES ('Luke','L.Short@kainos.com','London','T.all@kainos.com'); 
 INSERT INTO Employee (eName,eEMail,officeLocation,managerEmail)
-VALUES ('Angle','A.Typo@kainos.com','Atlanta','A.gular@kainos.com'); 
+VALUES ('Angle','A.Typo@kainos.com','Dublin','A.gular@kainos.com'); 
 INSERT INTO Employee (eName,eEMail,officeLocation,managerEmail)
 VALUES ('ABCDE','A.FGHIJK@kainos.com','London','C.Rule@kainos.com'); 
