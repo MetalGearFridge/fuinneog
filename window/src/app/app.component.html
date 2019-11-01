@@ -3,35 +3,59 @@
   <p class="signin-identity">You are signed in as employee</p>
 </header>
 <div class="container">
-<p></p>
+  <p></p>
   <ngb-tabset>
     <ngb-tab title="Courses" class="nav-tabs">
       <!--TODO: Add stuff for Courses-->
       <ng-template ngbTabContent>
-        <table class="table">
+        <div class="row">
+          <div class="column" style="width:60%">
+          <table class="table">
           <thead class="thead-dark">
             <tr>
               <th scope="col">#</th>
               <th scope="col">Name</th>
               <th scope="col">Date</th>
-              <th scope="col">Description</th>
+              <th scope="col">Location</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th scope="row">1</th>
-              <td>Test1</td>
-              <td>Test1</td>
-              <td>@Test3</td>
+              <th scope="row"></th>
+              <td></td>
+              <td></td>
+              <td></td>
             </tr>
           </tbody>
         </table>
+          </div>
+          <div class="column" style="width:40%">
+            <div class="divBox">
+              <h2 class="center"> Information</h2>
+              <h3>Location:</h3>
+              <h3>Date:</h3>
+              <h3>Time:</h3>
+            </div>
+            <hr>
+            <div class="divBox">
+              <h2 class="center"> Book Now</h2>
+              <div class="column" style="width:30%">
+              <h3>Email:</h3>
+              <input type="text" id="email">
+              </div>
+              <div class="column" style="width:70%">
+              <h3> Name:</h3>
+              </div>
+              <input type="text" id="name">
+              <button class="buttonCourse">Book Now</button>
+            </div>
+          </div>
+        </div>
+        
       </ng-template>
     </ngb-tab>
 
-    <ngb-tab title="My Courses">
-      
-    </ngb-tab>
+    <ngb-tab title="My Courses"></ngb-tab>
 
     <ngb-tab title="MAP Manager">
       <!--TODO: Add stuff for MAP Manager-->

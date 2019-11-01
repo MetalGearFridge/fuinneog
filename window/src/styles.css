@@ -14,9 +14,22 @@ html {
 	-webkit-text-size-adjust: 100%
 }
 
+.buttonCourse{
+	background-color: #61a83f;
+	align-content: center;
+}
+
 .nav-tabs{
 	background-color:#ffffff;
 	color:#d6d6d6;
+  }
+
+  .divBox {
+	background-color: lightgrey;
+	border: 10px solid rgb(54, 54, 54);
+	padding: 20px;
+	margin: 20px;
+	color: black
   }
 
   .nav-tabs > li > a:hover{
