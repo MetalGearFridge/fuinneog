@@ -26,3 +26,6 @@ node_modules/
 *.tar
 *.zip
 package-lock.json
+../.vscode/
+.editorconfig
+.idea/
