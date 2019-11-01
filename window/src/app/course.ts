@@ -1,5 +1,5 @@
 export class Course {
-  cid: number;
+  cid?: number;
   cName: string;
   cLocation: string;
   cDate: Date;

@@ -10,11 +10,34 @@ function updateEmployees(employeeReadyFn) {
   })
 }
 
+function updateCourses(courseReadyFn) {
+  db.getCourses(function (rows) {
+    courses = rows;
+    courseReadyFn();
+  })
+}
+
+
 app.use(express.json());
 
 app.get('/employee', function(req, res) {
   updateEmployees(function(){
     res.send(employees)
+  })
+})
+
+app.get('/courses', function (req, res) {
+  updateCourses(function () {
+    res.send(courses)
+  })
+})
+
+app.post('/addcourse', function (req, res) {
+  console.log('Add Course Called');
+  db.addCourse(req.body, function(insertedKey) {
+    updateCourses(function() {
+      res.send(courses);
+    })
   })
 })
 

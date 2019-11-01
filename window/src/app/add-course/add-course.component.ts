@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {Course} from '../course';
+import { Course } from '../course';
 import {Observable} from 'rxjs';
 import { FormsModule } from '@angular/forms';
+import {DataService} from '../data.service';
 
 @Component({
   selector: 'win-add-course',
@@ -11,16 +12,14 @@ import { FormsModule } from '@angular/forms';
 })
 export class AddCourseComponent implements OnInit {
 
-  constructor(private http: HttpClient) {}
+   public newCourse: Course;
 
-  courses: Observable<Course[]> = this.http.get<Course[]>('/api/courses');
+  constructor(private data: DataService) {}
 
-  public newCourse: Course;
-
-  public addCourse(): void {
+  public addCourse() {
     const courseToAdd = this.newCourse;
+    this.data.addCourse(courseToAdd);
     this.newCourse = new Course();
-    this.courses = this.http.post<Course[]>('/api/addcourse', courseToAdd);
   }
 
   ngOnInit(): void {
