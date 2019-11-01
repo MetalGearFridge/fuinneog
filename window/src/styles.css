@@ -42,8 +42,8 @@ tr:hover {
   }
 
   .divBox {
-	background-color: lightgrey;
-	border: 10px solid rgb(54, 54, 54);
+	background-color: rgb(214, 213, 213);
+	border: 2px solid rgb(54, 54, 54);
 	padding: 20px;
 	margin: 20px;
 	color: black
