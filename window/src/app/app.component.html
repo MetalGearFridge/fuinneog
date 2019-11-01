@@ -3,47 +3,56 @@
   <p class="signin-identity">You are signed in as employee</p>
 </header>
 <div class="container">
-<p></p>
+  <p></p>
   <ngb-tabset>
     <ngb-tab title="Courses" class="nav-tabs">
       <!--TODO: Add stuff for Courses-->
       <ng-template ngbTabContent>
-      <div style="width: 60%; float: left; border: 1px solid black; height: 300px">
-        <table class="table">
+        <div class="row">
+          <div class="column" style="width:60%">
+          <table class="table">
           <thead class="thead-dark">
             <tr>
               <th scope="col">#</th>
               <th scope="col">Name</th>
               <th scope="col">Date</th>
-              <th scope="col">Descriptio</th>
+              <th scope="col">Location</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th scope="row">1</th>
-              <td>Test1</td>
-              <td>Test1</td>
-              <td>@Test3</td>
+              <th scope="row"></th>
+              <td></td>
+              <td></td>
+              <td></td>
             </tr>
           </tbody>
         </table>
+          </div>
+          <div class="column" style="width:40%">
+            <div class="divBox">
+              <h2 class="center"> Information</h2>
+              <h3>Location:</h3>
+              <h3>Date:</h3>
+              <h3>Time:</h3>
+            </div>
+            <hr>
+            <div class="divBox">
+              <h2 class="center"> Book Now</h2>
+              <h3 style="width:30%">Email:</h3>
+              <input style="width:100%" type="text" id="email">
+              <h3 style="width:30%"> Name:</h3>
+              <input style="width:100%" type="text" id="name">
+              <p></p>
+              <button class="buttonCourse">Book Now</button>
+            </div>
+          </div>
         </div>
-        <div style="border: 1px solid black; height: 450px; width: 35%; float: right; padding-left: 15px; padding-right: 15px;" align="center">
-        <h2 style="text-align: center">Course Info:</h2>
-        <label for="Info" text-align="middle">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</label>
-        <input type="submit" value="Cancel Course?" class="button" onmouseover="button:hover" style="position: relative; top: 5%;">
-        </div>
-        <div style="border: 1px solid black; height: 150px; width: 60%; float: left;" align="center">
-        Email: <br>
-        <input type="text" style="position: relative; top: 5%;" style="width: 40%; height:20%;"> <br>
-        <input type="submit" class="button" style="position: relative; top: 20%;" value="Search Email">
-        </div>
+        
       </ng-template>
     </ngb-tab>
 
-    <ngb-tab title="My Courses">
-      
-    </ngb-tab>
+    <ngb-tab title="My Courses"></ngb-tab>
 
     <ngb-tab title="MAP Manager">
       <!--TODO: Add stuff for MAP Manager-->
