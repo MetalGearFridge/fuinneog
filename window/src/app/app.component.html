@@ -1,6 +1,6 @@
 <header class = "page-header">
   <img style="padding: 25px 25px 0px 25px;" src = 'assets/images/Kainos-MAP-800x350-Logo.png'/>
-  <p class="signin-identity">You are signed in as employee</p>
+  <p class="signin-identity">You are signed in as manager</p>
 </header>
 <div class="container">
   <p></p>
@@ -13,18 +13,18 @@
           <table class="table">
           <thead class="thead-dark">
             <tr>
-              <th scope="col">#</th>
+              <th scope="col"></th>
               <th scope="col">Name</th>
               <th scope="col">Date</th>
               <th scope="col">Location</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <tr *ngFor="let course of courses">
               <th scope="row"></th>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td>{{ course.name}}</td>
+              <td>{{ course.date }}</td>
+              <td>{{ course.location }}</td>
             </tr>
           </tbody>
         </table>
@@ -32,9 +32,9 @@
           <div class="column" style="width:40%">
             <div class="divBox">
               <h2 class="center"> Information</h2>
-              <h3>Location:</h3>
-              <h3>Date:</h3>
-              <h3>Time:</h3>
+              <h3>Location: Park Inn</h3>
+              <h3>Date: 01/09/2019</h3>
+              <h3>Time: 11:30</h3>
             </div>
             <hr>
             <div class="divBox">
@@ -44,7 +44,7 @@
               <h3 style="width:30%"> Name:</h3>
               <input style="width:100%" type="text" id="name">
               <p></p>
-              <button class="buttonCourse">Book Now</button>
+              <button onclick="alert('Submitted');" class="buttonCourse">Book Now</button>
             </div>
           </div>
         </div>
@@ -52,7 +52,40 @@
       </ng-template>
     </ngb-tab>
 
-    <ngb-tab title="My Courses"></ngb-tab>
+    <ngb-tab title="My Courses">
+      <ng-template ngbTabContent>
+      <div style="width: 60%; float: left; border: 1px solid black; height: 300px">
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Date</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Just can't Git this</td>
+              <td>03/10/2019</td>
+              <td>Park Inn</td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+        <div style="overflow-x: auto; border: solid black 1px; border-right: solid black 2px; height: 450px; width: 35%; float: right; padding-left: 15px; padding-right: 15px;" align="center">
+        <h2 style="text-align: center">Course Info:</h2>
+        <label for="Info" text-align="middle">This course ventures into the depths of professionalism within a company and gives the trainees insight in a company. This course will be taken over so many days and it will be for all employees with the company.</label>
+        <input type="submit" value="Cancel Course?" class="button" onmouseover="button:hover" style="position: relative; top: 5%; right: 30%;">
+        </div>
+        <div style="border: 1px solid black; height: 150px; width: 60%; float: left;" align="center">
+        Email:
+        <input type="text" style="position: relative; top: 5%;" style="width: 40%; height:20%;"> <br>
+        <input type="submit" class="button" style="position: relative; top: 20%; right: 40%;" value="Search Email">
+        </div>
+      </ng-template>
+    </ngb-tab>
 
     <ngb-tab title="MAP Manager">
       <!--TODO: Add stuff for MAP Manager-->
