@@ -1,6 +1,7 @@
 <header class = "page-header">
   <img style="padding: 25px 25px 0px 25px;" src = 'assets/images/Kainos-MAP-800x350-Logo.png'/>
   <p class="signin-identity">You are signed in as employee</p>
+  <li *ngFor="let employee of employees|async"> {{ employee.name }}</li>
 </header>
 <div class="container">
   <p></p>
@@ -48,7 +49,7 @@
             </div>
           </div>
         </div>
-        
+
       </ng-template>
     </ngb-tab>
 
