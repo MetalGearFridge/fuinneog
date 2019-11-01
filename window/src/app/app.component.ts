@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Employee } from './employee';
+import { DataService } from './data.service';
 
 @Component({
   selector: 'win-root',
@@ -33,5 +35,11 @@ export class AppComponent {
     location: "Park Inn"
   },
 ]
+    constructor(dataService: DataService) {
+        this.data = dataService;
+    }
+    title = 'window';
+    thisEmployee: Employee;
+    data: DataService;
 
 }
