@@ -1,12 +1,58 @@
 <header class = "page-header">
   <img style="padding: 25px 25px 0px 25px;" src = 'assets/images/Kainos-MAP-800x350-Logo.png'/>
-  <p class="signin-identity">You are signed in as employee</p>
+  <p class="signin-identity">You are signed in as manager</p>
 </header>
 <div class="container">
-<p></p>
+  <p></p>
   <ngb-tabset>
     <ngb-tab title="Courses" class="nav-tabs">
       <!--TODO: Add stuff for Courses-->
+      <ng-template ngbTabContent>
+        <div class="row">
+          <div class="column" style="width:60%">
+          <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Name</th>
+              <th scope="col">Date</th>
+              <th scope="col">Location</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let course of courses">
+              <th scope="row"></th>
+              <td>{{ course.name}}</td>
+              <td>{{ course.date }}</td>
+              <td>{{ course.location }}</td>
+            </tr>
+          </tbody>
+        </table>
+          </div>
+          <div class="column" style="width:40%">
+            <div class="divBox">
+              <h4 class="center"> Information</h4>
+              <p>Location: Park Inn</p>
+              <p>Date: 01/09/2019</p>
+              <p>Time: 11:30</p>
+            </div>
+            <hr>
+            <div class="divBox">
+              <h4 class="center"> Book Now</h4>
+              <p style="width:30%">Email:</p>
+              <input style="width:100%; height:30px" type="text" id="email">
+              <p style="width:30%;"> Name:</p>
+              <input style="width:100%; height:30px" type="text" id="name">
+              <p></p>
+              <button onclick="alert('Submitted');" style="position: relative; align-text:center" class="buttonCourse">Book Now</button>
+            </div>
+          </div>
+        </div>
+
+      </ng-template>
+    </ngb-tab>
+
+    <ngb-tab title="My Courses">
       <ng-template ngbTabContent>
       <div style="width: 60%; float: left; border: 1px solid black; height: 300px">
         <table class="table">
@@ -15,34 +61,30 @@
               <th scope="col">#</th>
               <th scope="col">Name</th>
               <th scope="col">Date</th>
-              <th scope="col">Descriptio</th>
+              <th scope="col">Description</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <th scope="row">1</th>
-              <td>Test1</td>
-              <td>Test1</td>
-              <td>@Test3</td>
+              <td>Just can't Git this</td>
+              <td>03/10/2019</td>
+              <td>Park Inn</td>
             </tr>
           </tbody>
         </table>
         </div>
-        <div style="border: 1px solid black; height: 450px; width: 35%; float: right; padding-left: 15px; padding-right: 15px;" align="center">
+        <div style="overflow-x: auto; border: solid black 1px; border-right: solid black 2px; height: 450px; width: 35%; float: right; padding-left: 15px; padding-right: 15px;" align="center">
         <h2 style="text-align: center">Course Info:</h2>
-        <label for="Info" text-align="middle">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</label>
-        <input type="submit" value="Cancel Course?" class="button" onmouseover="button:hover" style="position: relative; top: 5%;">
+        <label for="Info" text-align="middle">This course ventures into the depths of professionalism within a company and gives the trainees insight in a company. This course will be taken over so many days and it will be for all employees with the company.</label>
+        <input type="submit" value="Cancel Course?" class="button" onmouseover="button:hover" style="position: relative; top: 5%; right: 30%;">
         </div>
         <div style="border: 1px solid black; height: 150px; width: 60%; float: left;" align="center">
-        Email: <br>
+        Email:
         <input type="text" style="position: relative; top: 5%;" style="width: 40%; height:20%;"> <br>
-        <input type="submit" class="button" style="position: relative; top: 20%;" value="Search Email">
+        <input type="submit" class="button" style="position: relative; top: 20%; right: 40%;" value="Search Email">
         </div>
       </ng-template>
-    </ngb-tab>
-
-    <ngb-tab title="My Courses">
-      
     </ngb-tab>
 
     <ngb-tab title="MAP Manager">
