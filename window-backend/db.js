@@ -26,7 +26,7 @@ exports.getEmployees = function(callback) {
  
 exports.getCourses = function (callback) {
   db.query(
-    "select cName, cLocation, cDate from Course",
+    "select cName, cLocation, cDescription, cDate from Course",
     function (err, rows) {
       if (err) throw err;
       callback(rows)
