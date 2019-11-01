@@ -1,35 +1,35 @@
-<form>
+<form (ngSubmit) = "addCourse()">
   <fieldset>
 
     <h4>Create Course</h4>
 
     <div>
-      <label>Course Name:  </label><input type='text' name="CourseName" placeholder="Course Name"/>
+      <label>Course Name:  </label><input [(ngModel)]="newCourse.cName" type='text' name="CourseName" placeholder="Course Name"/>
     </div>
 
     <div>
-      <label>Course Location:  </label><input type='text' name="CourseLocation" placeholder="Course Location"/>
+      <label>Course Location:  </label><input [(ngModel)]="newCourse.cLocation" type='text' name="CourseLocation" placeholder="Course Location"/>
     </div>
 
     <div>
-      <label>Course Date:  </label><input name="CourseDate" type="date"/>
+      <label>Course Date:  </label><input [(ngModel)]="newCourse.cDate" name="CourseDate" type="date"/>
     </div>
 
     <div>
-      <label>Course Description:  </label><textarea></textarea>
+      <label>Course Description:  </label><textarea [(ngModel)]="newCourse.cDescription"></textarea>
     </div>
 
     <div>
-      <label>Tutor ID:  </label><input type='text' name="TutorID" placeholder="Tutor ID"/>
+      <label>Tutor ID:  </label><input [(ngModel)]="newCourse.tid" type='text' name="TutorID" placeholder="Tutor ID"/>
     </div>
 
     <div>
-      <label>Maximum Attendance:  </label><input type='text' name="MaxAttendance" placeholder="Max Attendance"/>
+      <label>Maximum Attendance:  </label><input [(ngModel)]="newCourse.maxAttend" type='text' name="MaxAttendance" placeholder="Max Attendance"/>
     </div>
 
     <br>
 
-    <button>Submit</button>
+    <input type="submit"/>
 
   </fieldset>
 </form>

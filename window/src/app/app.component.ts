@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Employee } from './employee';
+import { DataService } from './data.service';
+import { Course } from './course';
 
 @Component({
   selector: 'win-root',
@@ -6,32 +10,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  constructor(private http: HttpClient) {}
   title = 'window';
-  
-  courses = [{
-    id: 100,
-    name: "How to use Git",
-    date: "01/10/2019",
-    location: "Park Inn"
-  },
-  {
-    id: 100,
-    name: "Use Git Properly",
-    date: "02/10/2019",
-    location: "Park Inn"
-  },
-  {
-    id: 100,
-    name: "Just can't Git this",
-    date: "03/10/2019",
-    location: "Park Inn"
-  },
-  {
-    id: 100,
-    name: "Na Na Na Na",
-    date: "20/10/2019",
-    location: "Park Inn"
-  },
-]
+  employees = this.http.get<Employee[]>('/api/employee');
+  courses = this.http.get<Course[]>('/api/courses');
+
+
+    thisEmployee: Employee;
+    data: DataService;
 
 }
