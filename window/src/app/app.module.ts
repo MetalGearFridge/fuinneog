@@ -4,11 +4,15 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AddCourseComponent } from './add-course/add-course.component';
+import { EditCourseComponent } from './edit-course/edit-course.component';
+import { RemoveCourseComponent } from './remove-course/remove-course.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddCourseComponent
+    AddCourseComponent,
+    EditCourseComponent,
+    RemoveCourseComponent
   ],
   imports: [
     NgbModule,
