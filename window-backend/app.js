@@ -5,6 +5,7 @@ const db = require('./db.js');
 
 function updateEmployees(employeeReadyFn) {
   db.getEmployees(function(rows){
+    employees = rows;
     employeeReadyFn();
   })
 }
@@ -13,7 +14,7 @@ app.use(express.json());
 
 app.get('/employee', function(req, res) {
   updateEmployees(function(){
-    res.send(employee)
+    res.send(employees)
   })
 })
 
