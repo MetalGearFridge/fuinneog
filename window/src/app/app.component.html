@@ -10,7 +10,7 @@
       <ng-template ngbTabContent>
         <div class="row">
           <div class="column" style="width:60%">
-          <table class="table">
+          <table class="table" id="table_courseList">
           <thead class="thead-dark">
             <tr>
               <th scope="col"></th>
@@ -20,7 +20,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let course of courses|async">
+            <tr *ngFor="let course of courses|async" (click)="onSelect(course)">
               <th scope="row"></th>
               <td>{{ course.cName}}</td>
               <td>{{ course.cDate| slice:0:10 }}</td>
@@ -29,12 +29,11 @@
           </tbody>
         </table>
           </div>
+          
           <div class="column" style="width:40%">
             <div class="divBox">
               <h4 class="center"> Information</h4>
-              <p>Location: Park Inn</p>
-              <p>Date: 01/09/2019</p>
-              <p>Time: 11:30</p>
+              <course-detail [course]="thisCourse"></course-detail>
             </div>
             <hr>
             <div class="divBox">
@@ -69,9 +68,9 @@
           <tbody>
             <tr>
               <th scope="row">1</th>
-              <td>Just can't Git this</td>
-              <td>03/10/2019</td>
-              <td>Park Inn</td>
+              <td>Professionalism</td>
+              <td>2019-11-01</td>
+              <td>Belfast</td>
             </tr>
           </tbody>
         </table>

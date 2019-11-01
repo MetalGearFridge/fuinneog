@@ -1,0 +1,8 @@
+<div class="detail" *ngIf="course">
+<fieldset>
+Name: {{course.cName}}<br/>
+Country code: {{course.cLocation}}<br/>
+Date: {{course.cDate | slice:0:10}}<br/>
+Description: {{course.cDescription}}<br/>
+</fieldset>
+</div>
