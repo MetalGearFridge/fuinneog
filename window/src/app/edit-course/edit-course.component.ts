@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'win-edit-course',
@@ -7,12 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditCourseComponent implements OnInit {
 
+  formDisabled = true;
+
   constructor() 
-  { 
+  {
     
   }
 
   ngOnInit() {
+  }
+
+  onSubmit(f: NgForm) {
+    this.formDisabled = false;
   }
 
 }
