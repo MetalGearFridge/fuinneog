@@ -10,7 +10,7 @@
       <ng-template ngbTabContent>
         <div class="row">
           <div class="column" style="width:60%">
-          <table class="table">
+          <table class="table" id="table_courseList">
           <thead class="thead-dark">
             <tr>
               <th scope="col"></th>
@@ -20,35 +20,36 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let course of courses">
+            <tr *ngFor="let course of courses|async" (click)="onSelect(course)">
               <th scope="row"></th>
-              <td>{{ course.name}}</td>
-              <td>{{ course.date }}</td>
-              <td>{{ course.location }}</td>
+              <td>{{ course.cName}}</td>
+              <td>{{ course.cDate| slice:0:10 }}</td>
+              <td>{{ course.cLocation }}</td>
             </tr>
           </tbody>
         </table>
           </div>
+          
           <div class="column" style="width:40%">
             <div class="divBox">
-              <h2 class="center"> Information</h2>
-              <h3>Location: Park Inn</h3>
-              <h3>Date: 01/09/2019</h3>
-              <h3>Time: 11:30</h3>
+              <h4 class="center"> Information</h4>
+              <course-detail [course]="thisCourse"></course-detail>
             </div>
             <hr>
             <div class="divBox">
-              <h2 class="center"> Book Now</h2>
-              <h3 style="width:30%">Email:</h3>
-              <input style="width:100%" type="text" id="email">
-              <h3 style="width:30%"> Name:</h3>
-              <input style="width:100%" type="text" id="name">
+              <h4 class="center"> Book Now</h4>
+              <p style="width:30%">Email:</p>
+              <input style="width:100%; height:30px" type="text" id="email">
+              <p style="width:30%;"> Name:</p>
+              <input style="width:100%; height:30px" type="text" id="name">
+              <p style="width:100%;"> Manager Email:</p>
+              <input style="width:100%; height:30px" type="text" id="mEmail">
               <p></p>
-              <button onclick="alert('Submitted');" class="buttonCourse">Book Now</button>
+              <button onclick="alert('Submitted');" style="position: relative; align-text:center" class="buttonCourse">Book Now</button>
             </div>
           </div>
         </div>
-        
+
       </ng-template>
     </ngb-tab>
 
@@ -67,9 +68,9 @@
           <tbody>
             <tr>
               <th scope="row">1</th>
-              <td>Just can't Git this</td>
-              <td>03/10/2019</td>
-              <td>Park Inn</td>
+              <td>Professionalism</td>
+              <td>2019-11-01</td>
+              <td>Belfast</td>
             </tr>
           </tbody>
         </table>
