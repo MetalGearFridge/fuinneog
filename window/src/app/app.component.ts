@@ -14,9 +14,10 @@ export class AppComponent {
   title = 'window';
   employees = this.http.get<Employee[]>('/api/employee');
   courses = this.http.get<Course[]>('/api/courses');
-
-
     thisEmployee: Employee;
+    thisCourse: Course;
     data: DataService;
-
+onSelect (newCourse:Course):void{
+  this.thisCourse = newCourse
+}
 }
