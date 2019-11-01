@@ -14,11 +14,43 @@ html {
 	-webkit-text-size-adjust: 100%
 }
 
+.nav-tabs{
+	background-color:#ffffff;
+	color:#d6d6d6;
+  }
+
+  .nav-tabs > li > a:hover{
+	background-color: #61a83f !important;
+	  border: medium none;
+	  border-radius: 0;
+	  color:#000000;
+  }
+
 body {
   margin:0;
 }
 
+.wrapper h1{
+    font-family: 'Allura', cursive;
+    font-size: 52px;
+    margin-bottom: 60px;
+    text-align: center;
+  }
 
+  .button:hover {
+    border: 1px solid black;
+  }
+
+  .button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
 
 article,
 aside,
@@ -1788,7 +1820,7 @@ a.bg-danger:focus {
   margin-top: 0;
 	padding-bottom: 9px;
 	border-bottom: 1px solid #eeeeee;
-  background: #4D4D4D;
+	background-image: linear-gradient(to right, #61a83f , #283583);
 }
 
 ul,
