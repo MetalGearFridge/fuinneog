@@ -15,9 +15,8 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     AddCourseComponent,
-    task/RemoveCourseUI
     EditCourseComponent,
-    RemoveCourseComponent
+    RemoveCourseComponent,
     DetailComponent,
     ListComponent
   ],
