@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Employee } from './employee';
+import { DataService } from './data.service';
 
 @Component({
   selector: 'win-root',
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'window';
+    constructor(dataService: DataService) {
+        this.data = dataService;
+    }
+    title = 'window';
+    thisEmployee: Employee;
+    data: DataService;
+
 }
