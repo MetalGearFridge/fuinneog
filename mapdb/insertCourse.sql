@@ -4,6 +4,7 @@ VALUES
 'This course ventures into the depths of professionalism within a company and gives the trainees insight in a company', 20, 1 ),
 
 ('Managing Your Career', 'London', '2019-12-02',
+
 'This course ventures into the depths of professionalism within a company and gives the trainees insight in a company', 30, 2 ),
 
 ('PLC Compliance', 'Dublin', '2019-11-03',
@@ -20,6 +21,7 @@ VALUES
 
 ('Despacito 2', 'London', '2019-11-07',
 'This course ventures into the depths of professionalism within a company and gives the trainees insight in a company', 14, 3 )
+
 
 
 ;

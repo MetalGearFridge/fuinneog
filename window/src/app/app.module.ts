@@ -11,12 +11,13 @@ import { ListComponent } from './list/list.component';
 @NgModule({
   declarations: [
     AppComponent,
-    AddCourseComponent
+    AddCourseComponent,
+    DetailComponent,
+    ListComponent
   ],
   imports: [
     NgbModule,
-    DetailComponent,
-    ListComponent,
+    BrowserModule,
     HttpClientModule,
     BrowserModule
   ],
